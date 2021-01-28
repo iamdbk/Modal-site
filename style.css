@@ -1,0 +1,184 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --blue: #141c8ae3;
+  --violet: rgb(170, 58, 204);
+  --topMost: 10;
+  --secondtopMost: 9;
+  --thirdtopMost: 8;
+  --mLeft: 1.2rem;
+  --paddingAll: 15px;
+}
+.m-blw {
+  margin-bottom: 1em;
+}
+.none {
+  display: none !important;
+}
+body {
+}
+/* ******************NAV********************** */
+nav {
+  position: fixed;
+  /* outline: 1px solid red; */
+  background-color: var(--blue);
+  height: 100vh;
+  z-index: var(--thirdtopMost);
+}
+nav .logo {
+  padding: 2em 3em;
+}
+.logo img {
+  border-radius: 50%;
+}
+
+nav > ul {
+  list-style: none;
+}
+nav > ul > li {
+  padding: 1em 0 1em 1em;
+  outline: 1px solid white;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+/* *************************HEADER************************** */
+header {
+  background-color: var(--blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em var(--paddingAll);
+}
+
+header h1 {
+  margin-bottom: 0.7em;
+  letter-spacing: 3px;
+}
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  text-align: center;
+}
+header button {
+  font-size: 1.1rem;
+  padding: 0.3em 1.2em;
+  background-color: var(--violet);
+  color: white;
+  border: 1px solid var(--violet);
+  border-radius: 15px;
+  outline: 0;
+  cursor: pointer;
+}
+
+header button.toggle {
+  position: fixed;
+  font-size: 1rem;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 0.5em 0.6em;
+  cursor: pointer;
+  z-index: var(--secondtopMost);
+}
+
+/* *****************CONTAINER****************** */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 var(--paddingAll);
+}
+.container h2 {
+  margin: 1em 0;
+}
+ul#change-ul {
+  list-style-position: inside;
+  margin-left: 2em;
+}
+
+/* **************MODAL-CONTAINER************* */
+.modal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  z-index: var(--topMost);
+}
+.modal {
+  position: relative;
+
+  background-color: white;
+}
+.modal > .close-btn {
+  position: absolute;
+  top: 11px;
+  right: var(--mLeft);
+  padding: 0 5px;
+  background-color: var(--blue);
+  color: white;
+  border: 1px solid var(--blue);
+  outline: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-header {
+  background-color: var(--blue);
+  padding: 1rem var(--mLeft);
+  color: white;
+}
+
+.modal-content {
+  padding: 1.5em var(--mLeft) 1em var(--mLeft);
+}
+
+.modal-form > div > label,
+.modal-content p {
+  font-weight: bolder;
+}
+
+.modal-content > p {
+  margin-bottom: 0.8em;
+}
+.modal-form > div > label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.modal-form > div > input {
+  width: 100%;
+  padding: 0.5em 0.8em;
+  margin-bottom: 0.8em;
+  outline: none;
+}
+
+.modal-form > .submit-btn {
+  color: white;
+  background-color: var(--violet);
+  padding: 0.3em 1em;
+  border: 1px solid var(--violet);
+  outline: 0;
+  position: relative;
+  left: 40%;
+  font-size: 1rem;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+
+input::placeholder {
+  font-size: 0.9rem;
+}
